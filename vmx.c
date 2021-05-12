@@ -66,6 +66,7 @@
 MODULE_AUTHOR("Qumranet");
 MODULE_LICENSE("GPL");
 
+extern u32 number_of_exits[70];
 extern atomic_t exit_counters;
 extern atomic64_t exit_time_length;
 
@@ -6092,6 +6093,7 @@ static int __vmx_handle_exit(struct kvm_vcpu *vcpu, fastpath_t exit_fastpath)
 
 	exit_handler_index = array_index_nospec((u16)exit_reason.basic,
 						kvm_vmx_max_exit_handlers);
+	number_of_exits[exit_handler_index]++;
 	if (!kvm_vmx_exit_handlers[exit_handler_index])
 		goto unexpected_vmexit;
 

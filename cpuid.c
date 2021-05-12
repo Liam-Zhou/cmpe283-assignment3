@@ -31,6 +31,9 @@
 u32 kvm_cpu_caps[NCAPINTS] __read_mostly;
 EXPORT_SYMBOL_GPL(kvm_cpu_caps);
 
+u32 number_of_exits[70];
+EXPORT_SYMBOL(number_of_exits);
+
 atomic_t exit_counters;
 EXPORT_SYMBOL(exit_counters);
 
@@ -1160,7 +1163,8 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 		printk(KERN_INFO "exit time = %llu", atomic64_read(&exit_time_length));
 
 	} else if(eax == 0x4ffffffe){
-
+		eax = number_of_exits[(int)ecx];
+		printk(KERN_INFO "number_of_exits =%d", number_of_exits[(int)ecx]);
 	} else {
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
 	}
