@@ -30,7 +30,7 @@ main(int argc, char **argv)
     //     temp += (int)argv[1][i] * tens;
     //     tens = tens * 10;
     // }
-    ecx = 1;
+    ecx = 13;
     __cpuid(&eax, &ebx, &ecx, &edx);
     printf("CPUID(0x4FFFFFFE), exit number=1 exit=%u\n", eax);
 }
