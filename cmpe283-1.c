@@ -39,5 +39,11 @@ main(int argc, char **argv)
     ecx = 0;
     __cpuid(&eax, &ebx, &ecx, &edx);
     printf("CPUID(0x4FFFFFFE), exit number=0 exit=%u\n", eax);
+    ecx = 1;
+    __cpuid(&eax, &ebx, &ecx, &edx);
+    printf("CPUID(0x4FFFFFFE), exit number=1 exit=%u\n", eax);
+     ecx = 2;
+    __cpuid(&eax, &ebx, &ecx, &edx);
+    printf("CPUID(0x4FFFFFFE), exit number=2 exit=%u\n", eax);
     
 }
