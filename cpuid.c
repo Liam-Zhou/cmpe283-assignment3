@@ -1147,7 +1147,7 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 
 	eax = kvm_rax_read(vcpu);
 	ecx = kvm_rcx_read(vcpu);
-	if(eax == 0x4fffffff){
+	if(eax == 0x4FFFFFFF){
 
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);
 
@@ -1162,9 +1162,17 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 
 		printk(KERN_INFO "exit time = %llu", atomic64_read(&exit_time_length));
 
-	} else if(eax == 0x4ffffffe){
-		eax = number_of_exits[(int)ecx];
-		printk(KERN_INFO "number_of_exits =%d", number_of_exits[(int)ecx]);
+	} else if(eax == 0x4FFFFFFE){
+		if(ecx == 35 || ecx == 38 || ecx == 42 || ecx == 65){
+			eax = 0; 
+			ebx = 0; 
+			ecx = 0; 
+			edx = 0xFFFFFFFF;
+			printk(KERN_INFO "not defined exit number in SDM: %d", ecx);
+		}else{
+			eax = number_of_exits[(int)ecx];
+			printk(KERN_INFO "number_of_exits =%d", number_of_exits[(int)ecx]);
+		}
 	} else {
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
 	}
