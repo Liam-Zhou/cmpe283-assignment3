@@ -30,12 +30,12 @@ main(int argc, char **argv)
     //     temp += (int)argv[1][i] * tens;
     //     tens = tens * 10;
     // }
-//     int i = 0;
-//     for(i=1;i<20;i++){
-//     ecx = i;
-//     __cpuid(&eax, &ebx, &ecx, &edx);
-//     printf("CPUID(0x4FFFFFFE), exit number=%d exit=%u\n", i, eax);
-//     }
+    int i = 0;
+    for(i=1;i<20;i++){
+    ecx = i;
+    __cpuid(&eax, &ebx, &ecx, &edx);
+    printf("CPUID(0x4FFFFFFE), exit number=%d exit=%u\n", i, eax);
+    }
     ecx = 1;
     __cpuid(&eax, &ebx, &ecx, &edx);
     printf("CPUID(0x4FFFFFFE), exit number=1 exit=%u\n", eax);
