@@ -31,7 +31,7 @@ main(int argc, char **argv)
     //     tens = tens * 10;
     // }
     int i = 0;
-    for(i=1;i<70;i++){
+    for(i=1;i<20;i++){
     ecx = i;
     __cpuid(&eax, &ebx, &ecx, &edx);
     printf("CPUID(0x4FFFFFFE), exit number=%d exit=%u\n", i, eax);
