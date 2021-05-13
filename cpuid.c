@@ -1178,8 +1178,8 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 			eax = 0; 
 			ebx = 0; 
 			ecx = 0; 
-			edx = 0;
-			printk(KERN_INFO "exit types not enabled in KVM");
+			edx = 0xFFFFFFFF;
+			printk(KERN_INFO "not defined exit number in SDM: %d", ecx);
 		}
 	} else {
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
