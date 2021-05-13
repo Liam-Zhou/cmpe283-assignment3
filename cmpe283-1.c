@@ -17,7 +17,12 @@ __cpuid(unsigned int *eax, unsigned int *ebx, unsigned int *ecx,
 int
 main(int argc, char **argv)
 {
-    printf("argv[1] = %s \n",argv[1]);
+    if(argv[1] == "1"){
+        printf("yes argv[1] = %s \n",argv[1]);
+    }else{
+            printf("no argv[1] = %s \n",argv[1]);
+    }
+    
     unsigned int eax, ebx, ecx, edx;
     unsigned int exits;
     
@@ -38,13 +43,13 @@ main(int argc, char **argv)
 //     printf("CPUID(0x4FFFFFFE), exit number=%d exit=%u\n", i, eax);
 //     } 
 //     switch(argv[1]){
-//         case '1': ecx = 1; break;
-//         case '2': ecx = 2; break;
-//         case '3': ecx = 3; break;
-//         case '4': ecx = 4; break;
-//         case '5': ecx = 5; break;
-//         case '6': ecx = 6; break;
-//         case '7': ecx = 7; break;
+//         case "1": ecx = 1; break;
+//         case "2": ecx = 2; break;
+//         case "3": ecx = 3; break;
+//         case "4": ecx = 4; break;
+//         case "5": ecx = 5; break;
+//         case "6": ecx = 6; break;
+//         case "7": ecx = 7; break;
 //         default:printf("error\n"); break;
 // //     }
 //     __cpuid(&eax, &ebx, &ecx, &edx);
