@@ -116,13 +116,7 @@ main(int argc, char **argv)
 //         case "6": ecx = 6; break;
 //         case "7": ecx = 7; break;
 //         default:printf("error\n"); break;
-// //     }
-    int i = 0;
-    for(i=0;i<20;i++){
-        ecx = i;
-        __cpuid(&eax, &ebx, &ecx, &edx);
-        printf("CPUID(0x4FFFFFFE), exit number=%d exit=%u\n", i, eax);
-    } 
-    // __cpuid(&eax, &ebx, &ecx, &edx);
-    // printf("CPUID(0x4FFFFFFE), exit number=%s exit=%u\n",argv[1] , eax);
+// //     } 
+    __cpuid(&eax, &ebx, &ecx, &edx);
+    printf("CPUID(0x4FFFFFFE), exit number=%s exit=%u\n",argv[1] , eax);
 }
