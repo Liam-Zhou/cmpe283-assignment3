@@ -119,4 +119,4 @@ Around over 3 millions totally.
 
 4, Of the exit types defined in the SDM, which are the most frequent? Least? 
 
- - According to my output, the number 48 and 10 have the most exits (over million times), which are the CPUID and EPT in the SDM. The least are number 29, 47, 54 and 55, all of them are lower than 20. They are MOV DR, Access to LDTR or TR, WBINVD or WBNOINVD and XSETBV in the SDM.
+ - According to my output, the exit number 48 and 10 have the most exits (over million times), which are the CPUID and EPT in the SDM. The least are exit number 29, 47, 54 and 55, all of their output are lower than 20 times. They are MOV DR, Access to LDTR or TR, WBINVD or WBNOINVD and XSETBV in the SDM.
