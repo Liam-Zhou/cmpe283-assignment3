@@ -36,16 +36,7 @@ main(int argc, char **argv)
 //     __cpuid(&eax, &ebx, &ecx, &edx);
 //     printf("CPUID(0x4FFFFFFE), exit number=%d exit=%u\n", i, eax);
 //     } 
-    ecx = 1;
+    ecx = (int)argv[1];
     __cpuid(&eax, &ebx, &ecx, &edx);
-    printf("CPUID(0x4FFFFFFE), exit number=1 exit=%u\n", eax); 
-    ecx = 35;
-    __cpuid(&eax, &ebx, &ecx, &edx);
-    printf("CPUID(0x4FFFFFFE), exit number=35 exit=%u\n", eax); 
-     ecx = 0;
-    __cpuid(&eax, &ebx, &ecx, &edx);
-    printf("CPUID(0x4FFFFFFE), exit number=0 exit=%u\n", eax); 
-     ecx = 23;
-    __cpuid(&eax, &ebx, &ecx, &edx);
-    printf("CPUID(0x4FFFFFFE), exit number=23 exit=%u\n", eax); 
+    printf("CPUID(0x4FFFFFFE), exit number=%s exit=%u\n",argv[1] , eax);
 }
