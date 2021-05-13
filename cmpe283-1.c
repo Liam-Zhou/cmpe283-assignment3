@@ -20,7 +20,7 @@ main(int argc, char **argv)
     if(argv[1] == "1"){
         printf("yes argv[1] = %s \n",argv[1]);
     }else{
-            printf("no argv[1] = %s \n",argv[1]);
+            printf("no xing argv[1] = %s \n",*argv[1]);
     }
     
     unsigned int eax, ebx, ecx, edx;
