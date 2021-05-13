@@ -165,7 +165,7 @@ the kernel log output:
 
 3, Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
 
-Yes, the number of exits will increase at a stable rate, take the number 10 for example, here is the output:
+  Yes, the number of exits will increase at a stable rate, take the number 10 for example, here is the output:
 
 ```
 CPUID(0x4FFFFFFE), exit number=10 exits=145712
@@ -177,4 +177,4 @@ Around over 400000 totally a full VM boot entail.
 
 4, Of the exit types defined in the SDM, which are the most frequent? Least? 
 
- - According to my output, the number10, 30, 32 and 48 have the most exits (over 100000 times), which are the CPUID, I/O instruction, WRMSR and EPT violation in the SDM. The least are number 29, 46, 47, 54 and 55, all of them are lower than 10. They are MOV DR, Access to GDTR or IDTR, Access to LDTR or TR, WBINVD or WBNOINVD and XSETBV in the SDM.
+  According to my output, the number10, 30, 32 and 48 have the most exits (over 100000 times), which are the CPUID, I/O instruction, WRMSR and EPT violation in the SDM. The least are number 29, 46, 47, 54 and 55, all of them are lower than 10. They are MOV DR, Access to GDTR or IDTR, Access to LDTR or TR, WBINVD or WBNOINVD and XSETBV in the SDM.
