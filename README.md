@@ -11,17 +11,25 @@ Step2: modify cpuid.c under arch/x86/kvm to add new feature: leaf function 0x4ff
 
 ```
 if(eax == 0x4FFFFFFE){
-if(ecx == 35 || ecx == 38 || ecx == 42 || ecx == 65){
-eax = 0; 
-ebx = 0; 
-ecx = 0; 
-edx = 0xFFFFFFFF;
-printk(KERN_INFO "not defined exit number in SDM: %d", ecx);
-}else{
-eax = number_of_exits[(int)ecx];
-printk(KERN_INFO "number_of_exits =%d", number_of_exits[(int)ecx]);
-}
-}
+		if(ecx >= 0 && ecx < 69){
+			if(ecx == 35 || ecx == 38 || ecx == 42 || ecx == 65){
+				eax = 0; 
+				ebx = 0; 
+				ecx = 0; 
+				edx = 0xFFFFFFFF;
+				printk(KERN_INFO "not defined exit number in SDM: %d", ecx);
+			}else{
+				eax = number_of_exits[(int)ecx];
+				printk(KERN_INFO "number_of_exits =%d", number_of_exits[(int)ecx]);
+			}
+		}else{
+			eax = 0; 
+			ebx = 0; 
+			ecx = 0; 
+			edx = 0;
+			printk(KERN_INFO "exit types not enabled in KVM");
+		}
+	}
 ```
 
 Step3: rebuild the new linux kernel using make command：sudo make -j 2 modules && sudo make -j 2 && sudo make modules_install && sudo make install;
