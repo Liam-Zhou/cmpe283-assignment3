@@ -102,7 +102,6 @@ CPUID(0x4FFFFFFE), exit number=65 exits=0
 CPUID(0x4FFFFFFE), exit number=66 exits=0
 CPUID(0x4FFFFFFE), exit number=67 exits=0
 CPUID(0x4FFFFFFE), exit number=68 exits=0
-CPUID(0x4FFFFFFE), exit number=69 exits=0
 ```
 
 
