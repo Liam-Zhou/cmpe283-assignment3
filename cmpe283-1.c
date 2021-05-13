@@ -17,6 +17,7 @@ __cpuid(unsigned int *eax, unsigned int *ebx, unsigned int *ecx,
 int
 main(int argc, char **argv)
 {
+    printf("argv[1] = %s \n",argv[1]);
     unsigned int eax, ebx, ecx, edx;
     unsigned int exits;
     
@@ -45,7 +46,7 @@ main(int argc, char **argv)
 //         case '6': ecx = 6; break;
 //         case '7': ecx = 7; break;
 //         default:printf("error\n"); break;
-//     }
-    __cpuid(&eax, &ebx, &ecx, &edx);
-    printf("CPUID(0x4FFFFFFE), exit number=%s exit=%u\n",argv[1] , eax);
+// //     }
+//     __cpuid(&eax, &ebx, &ecx, &edx);
+//     printf("CPUID(0x4FFFFFFE), exit number=%s exit=%u\n",argv[1] , eax);
 }
