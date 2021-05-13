@@ -17,7 +17,7 @@ __cpuid(unsigned int *eax, unsigned int *ebx, unsigned int *ecx,
 int
 main(int argc, char **argv)
 {
-    if(argv[1] == "1"){
+    if(argv[1] == 1){
         printf("yes argv[1] = %s \n",argv[1]);
     }else{
             printf("no argv[1] = %s \n",argv[1]);
