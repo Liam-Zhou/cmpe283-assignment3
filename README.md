@@ -195,8 +195,8 @@ CPUID(0x4FFFFFFE), exit number=10 exits=145730
 CPUID(0x4FFFFFFE), exit number=10 exits=145748
 CPUID(0x4FFFFFFE), exit number=10 exits=145766
 ```
-Around over 3 millions totally.
+Around over 400000 totally a full VM boot entail.
 
 4, Of the exit types defined in the SDM, which are the most frequent? Least? 
 
- - According to my output, the exit number 48 and 10 have the most exits (over million times), which are the CPUID and EPT in the SDM. The least are exit number 29, 47, 54 and 55, all of their output are lower than 20 times. They are MOV DR, Access to LDTR or TR, WBINVD or WBNOINVD and XSETBV in the SDM.
+ - According to my output, the number10, 30, 32 and 48 have the most exits (over 100000 times), which are the CPUID, I/O instruction, WRMSR and EPT violation in the SDM. The least are number 29, 46, 47, 54 and 55, all of them are lower than 10. They are MOV DR, Access to GDTR or IDTR, Access to LDTR or TR, WBINVD or WBNOINVD and XSETBV in the SDM.
