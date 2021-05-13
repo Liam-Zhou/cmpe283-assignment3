@@ -41,19 +41,19 @@ Step5: using virt-manager to enter the inner vm and run the test file on inner v
 Step6: run the test code and get the output:
 
 ```
-CPUID(0x4FFFFFFE), exit number=0 exits=35832
-CPUID(0x4FFFFFFE), exit number=1 exits=0
+CPUID(0x4FFFFFFE), exit number=0 exits=11827
+CPUID(0x4FFFFFFE), exit number=1 exits=61745
 CPUID(0x4FFFFFFE), exit number=2 exits=0
 CPUID(0x4FFFFFFE), exit number=3 exits=0
 CPUID(0x4FFFFFFE), exit number=4 exits=0
 CPUID(0x4FFFFFFE), exit number=5 exits=0
 CPUID(0x4FFFFFFE), exit number=6 exits=0
-CPUID(0x4FFFFFFE), exit number=7 exits=0
+CPUID(0x4FFFFFFE), exit number=7 exits=20715
 CPUID(0x4FFFFFFE), exit number=8 exits=0
 CPUID(0x4FFFFFFE), exit number=9 exits=0
-CPUID(0x4FFFFFFE), exit number=10 exits=1276322
+CPUID(0x4FFFFFFE), exit number=10 exits=143925
 CPUID(0x4FFFFFFE), exit number=11 exits=0
-CPUID(0x4FFFFFFE), exit number=12 exits=0
+CPUID(0x4FFFFFFE), exit number=12 exits=80591
 CPUID(0x4FFFFFFE), exit number=13 exits=0
 CPUID(0x4FFFFFFE), exit number=14 exits=0
 CPUID(0x4FFFFFFE), exit number=15 exits=0
@@ -69,11 +69,11 @@ CPUID(0x4FFFFFFE), exit number=24 exits=0
 CPUID(0x4FFFFFFE), exit number=25 exits=0
 CPUID(0x4FFFFFFE), exit number=26 exits=0
 CPUID(0x4FFFFFFE), exit number=27 exits=0
-CPUID(0x4FFFFFFE), exit number=28 exits=818402
-CPUID(0x4FFFFFFE), exit number=29 exits=10
-CPUID(0x4FFFFFFE), exit number=30 exits=35832
-CPUID(0x4FFFFFFE), exit number=31 exits=14521
-CPUID(0x4FFFFFFE), exit number=32 exits=0
+CPUID(0x4FFFFFFE), exit number=28 exits=25757
+CPUID(0x4FFFFFFE), exit number=29 exits=2
+CPUID(0x4FFFFFFE), exit number=30 exits=182340
+CPUID(0x4FFFFFFE), exit number=31 exits=1771
+CPUID(0x4FFFFFFE), exit number=32 exits=258117
 CPUID(0x4FFFFFFE), exit number=33 exits=0
 CPUID(0x4FFFFFFE), exit number=34 exits=0
 CPUID(0x4FFFFFFE), exit number=35 exits=0
@@ -81,22 +81,22 @@ CPUID(0x4FFFFFFE), exit number=36 exits=0
 CPUID(0x4FFFFFFE), exit number=37 exits=0
 CPUID(0x4FFFFFFE), exit number=38 exits=0
 CPUID(0x4FFFFFFE), exit number=39 exits=0
-CPUID(0x4FFFFFFE), exit number=40 exits=207652
+CPUID(0x4FFFFFFE), exit number=40 exits=11750
 CPUID(0x4FFFFFFE), exit number=41 exits=0
 CPUID(0x4FFFFFFE), exit number=42 exits=0
 CPUID(0x4FFFFFFE), exit number=43 exits=0
 CPUID(0x4FFFFFFE), exit number=44 exits=0
 CPUID(0x4FFFFFFE), exit number=45 exits=0
-CPUID(0x4FFFFFFE), exit number=46 exits=24
-CPUID(0x4FFFFFFE), exit number=47 exits=8
-CPUID(0x4FFFFFFE), exit number=48 exits=2494242
-CPUID(0x4FFFFFFE), exit number=49 exits=0
+CPUID(0x4FFFFFFE), exit number=46 exits=6
+CPUID(0x4FFFFFFE), exit number=47 exits=2
+CPUID(0x4FFFFFFE), exit number=48 exits=137076
+CPUID(0x4FFFFFFE), exit number=49 exits=39974
 CPUID(0x4FFFFFFE), exit number=50 exits=0
 CPUID(0x4FFFFFFE), exit number=51 exits=0
 CPUID(0x4FFFFFFE), exit number=52 exits=0
 CPUID(0x4FFFFFFE), exit number=53 exits=0
-CPUID(0x4FFFFFFE), exit number=54 exits=14
-CPUID(0x4FFFFFFE), exit number=55 exits=12
+CPUID(0x4FFFFFFE), exit number=54 exits=3
+CPUID(0x4FFFFFFE), exit number=55 exits=3
 CPUID(0x4FFFFFFE), exit number=56 exits=0
 CPUID(0x4FFFFFFE), exit number=57 exits=0
 CPUID(0x4FFFFFFE), exit number=58 exits=0
@@ -190,10 +190,10 @@ the kernel log output:
 Yes, the number of exits will increase at a stable rate, take the number 10 for example, here is the output:
 
 ```
-CPUID(0x4FFFFFFE), exit number=10 exits=1412006
-CPUID(0x4FFFFFFE), exit number=10 exits=1412024
-CPUID(0x4FFFFFFE), exit number=10 exits=1412042
-CPUID(0x4FFFFFFE), exit number=10 exits=1412060
+CPUID(0x4FFFFFFE), exit number=10 exits=145712
+CPUID(0x4FFFFFFE), exit number=10 exits=145730
+CPUID(0x4FFFFFFE), exit number=10 exits=145748
+CPUID(0x4FFFFFFE), exit number=10 exits=145766
 ```
 Around over 3 millions totally.
 
