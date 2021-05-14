@@ -1164,6 +1164,7 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 
 	} else if(eax == 0x4FFFFFFE){
 		if(ecx >= 0 && ecx < 69){
+			
 			if(ecx == 35 || ecx == 38 || ecx == 42 || ecx == 65){
 				eax = 0; 
 				ebx = 0; 
@@ -1172,7 +1173,7 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 				printk(KERN_INFO "not defined exit number in SDM: %d", ecx);
 			}else{
 				eax = number_of_exits[(int)ecx];
-				printk(KERN_INFO "number_of_exits =%d", number_of_exits[(int)ecx]);
+				printk(KERN_INFO "exit code= %d, number_of_exits =%d", (int)ecx, number_of_exits[(int)ecx]);
 			}
 		}else{
 			eax = 0; 
